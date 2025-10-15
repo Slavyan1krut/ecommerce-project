@@ -1,0 +1,11 @@
+.nofound-page {
+    margin: 0 auto;
+    max-width: 850px;
+    padding-left: 25px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    text-decoration: underline;
+}
