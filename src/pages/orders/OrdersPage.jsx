@@ -1,9 +1,10 @@
 import './OrdersPage.css'
-import { Header } from '../components/Header';
+import { Header } from '../../components/Header';
 import { useState, useEffect, Fragment } from 'react';
-import { formatMoney } from '../utils/money';
+import { formatMoney } from '../../utils/money';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { Link } from 'react-router';
 
 export function OrdersPage({ cart }) {
     const [orders, setOrders] = useState([]);
@@ -71,11 +72,11 @@ export function OrdersPage({ cart }) {
                                             </div>
 
                                             <div className="product-actions">
-                                                <a href="/tracking">
+                                                <Link to={`/tracking/${order.id}/${orderProduct.product.id}`}>
                                                     <button className="track-package-button button-secondary">
                                                         Track package
                                                     </button>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </Fragment>
                                     );
