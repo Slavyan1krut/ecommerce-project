@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router';
-
 import './header.css'
 
 export function Header({ cart }) {
